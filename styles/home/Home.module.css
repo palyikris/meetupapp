@@ -1,0 +1,122 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "column";
+          flex-direction: "column";
+  width: 100%;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding-top: 10vmin;
+}
+
+.container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  width: 40%;
+  border: 1.2px solid #C62368;
+  padding: 10vmin 5vmin;
+  border-radius: 10px;
+}
+
+.container .form .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 2vmin 0 2vmin 0;
+}
+
+.container .form .data label {
+  text-align: center;
+  width: 50%;
+  color: #C62368;
+}
+
+.container .form .data input {
+  width: 50%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #C62368;
+  padding: 1vmin .5vmin;
+  outline: none;
+  color: #C62368;
+}
+
+.container .form button {
+  border: none;
+  background-color: #C62368;
+  color: #00101c;
+  font-size: 20px;
+  padding: 1.5vmin 8vmin;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 5vmin 0;
+  border-radius: 10px;
+  outline: none;
+}
+
+.container .form button:hover {
+  cursor: pointer;
+  background-color: #00101c;
+  color: #C62368;
+}
+
+.container .form .additionals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 2vmin;
+}
+
+.container .form .additionals a {
+  color: #C62368;
+}
+/*# sourceMappingURL=Home.module.css.map */

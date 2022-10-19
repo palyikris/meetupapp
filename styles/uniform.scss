@@ -1,0 +1,11 @@
+$maincolor : #C62368;
+$bgcolor : #00101c;
+$highlighter: #000d16;
+
+@mixin centerDiv($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    width: 100%;
+}

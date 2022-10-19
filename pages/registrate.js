@@ -7,21 +7,30 @@ import {app, db}  from "../firebaseConfig"
 import { collection, addDoc, getDocs } from 'firebase/firestore';
 import {useRef, useState} from "react"
 import Link from "next/link"
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'
+
 
 
 export default function Home() {
 
+
+   
   const userName = useRef()
   const passWord = useRef()
   const router = useRouter();
   let [usersArray, setUsersArray] = useState([])
-  let isUserValid = false; 
-  let thisUser = null;
+  let isLoggedIn = false
+  let areInputsFilled = true;
 
-  function login()  {
 
-    const dbInstance = collection(db, 'users');
+
+  function registrate()  {
+
+    const dbInstance = collection(db, 'users')
+
+    if(userName.current.value === "" || passWord.current.value === ""){
+      areInputsFilled = false;
+    }
 
     getDocs(dbInstance)
         .then((data) => {
@@ -30,28 +39,35 @@ export default function Home() {
             }))
         })
         .then(() => {
-            usersArray.map(user => {
-                console.log(user)
-                if(userName.current.value === user.username) {
-                  if(passWord.current.value === user.password) {
-                    isUserValid = true;
-                    thisUser = user
-                  }
-                }
+            usersArray.map((user) => {
+              console.log(user, user.username)
+              console.log(user.username === userName.current.value)
+              if(user.username === userName.current.value){
+                isLoggedIn = true;
+              }
+              console.log(isLoggedIn)
             })
         })
         .then(() => {
-            if(isUserValid) {
-              router.push(`/users/${thisUser.id}`)
+            if(areInputsFilled === false){
+              alert('Please fill both fields!')
+            }
+            else if(isLoggedIn === true){
+              alert('You are logged in already!')
+            }
+            else{
+              addDoc(
+                dbInstance,
+                {
+                    username : userName.current.value,
+                    password : passWord.current.value
+                }
+              )
+                .then(() => {
+                    router.push("/")
+                })
             }
         })
-  }
-
-  function guidGenerator() {
-    var S4 = function() {
-       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
-    };
-    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
   }
 
 
@@ -59,7 +75,7 @@ export default function Home() {
 
 
     <>
-      <UniHead title="Login" description="Get started with UrmeetUps" icon="../public/vercel.svg"></UniHead>
+      <UniHead title="Registrate" description="Get started with UrmeetUps" icon="../public/vercel.svg"></UniHead>
       <div className={styles.container}>
         <div className={styles.form}>
           <div className={styles.data}>
@@ -70,10 +86,10 @@ export default function Home() {
             <label htmlFor="">Password</label>
             <input type="password" placeholder="Password..." ref={passWord}/>
           </div>
-          <button onClick={login}>Log in</button>
+          <button onClick={registrate} type="submit">Registrate</button>
           <div className={styles.additionals}>
-            <Link href="/registrate">
-              <a>Registrate</a>
+            <Link href="/">
+              <a>Got an account? Log in!</a>
             </Link>
             <Link href="/forgottenpwd">
               <a>Forgot your password?</a>

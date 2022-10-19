@@ -1,0 +1,58 @@
+@import "../uniform";
+
+.container{
+    @include centerDiv("column");
+    flex-direction: column;
+    padding-top: 10vmin;
+    .form{
+        @include centerDiv(column);
+        width: 40%;
+        border: 1.2px solid $maincolor;
+        padding: 10vmin 5vmin;
+        border-radius: 10px;
+        .data{
+            @include centerDiv(row);
+            justify-content: space-evenly;
+            margin: 2vmin 0 2vmin 0;
+            label{
+                text-align: center;
+                width: 50%;
+                color: $maincolor;
+            }
+            input{
+                width: 50%;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $maincolor;
+                padding: 1vmin .5vmin;
+                outline: none;
+                color: $maincolor;
+            }
+        }
+        button{
+            border: none;
+            background-color: $maincolor;
+            color: $bgcolor;
+            font-size: 20px;
+            padding: 1.5vmin 8vmin;
+            transition: all 0.5s;
+            margin: 5vmin 0;
+            border-radius: 10px;
+            outline: none;
+            &:hover{
+                cursor: pointer;
+                background-color: $bgcolor;
+                color: $maincolor;
+            }
+
+        }
+        .additionals{
+            @include centerDiv(row);
+            justify-content: space-evenly;
+            margin-top: 2vmin;
+            a{
+                color: $maincolor;
+            }
+        }
+    }
+}
