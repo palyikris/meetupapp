@@ -1,0 +1,119 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  width: auto;
+}
+
+.container .listItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 10vmin;
+  border: 1px solid #C62368;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(198, 35, 104, 0.75);
+          box-shadow: 0px 0px 15px 1px rgba(198, 35, 104, 0.75);
+  padding: 8vmin 3vmin;
+}
+
+.container .listItem div {
+  color: #C62368;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin: 1vmin 0;
+}
+
+.container .listItem div p {
+  margin: 0;
+}
+
+.container .listItem svg {
+  width: 25px;
+  margin-right: 2vmin;
+}
+
+.container .listItem h1 {
+  color: #C62368;
+}
+
+.container .listItem h4 {
+  font-style: italic;
+  color: #C62368;
+  margin-bottom: 8vmin;
+}
+
+.container .listItem button {
+  background-color: #C62368;
+  color: #00101c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  width: auto;
+  padding: 1vmin 15vmin;
+  margin-top: 5vmin;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.container .listItem button:hover {
+  color: #C62368;
+  background-color: #00101c;
+  border: 1px solid #C62368;
+  cursor: pointer;
+}
+
+.container .listItem button svg {
+  margin: 0;
+}
+/*# sourceMappingURL=meetuplist.module.css.map */

@@ -31,7 +31,6 @@ export default function Home() {
         })
         .then(() => {
             usersArray.map(user => {
-                console.log(user)
                 if(userName.current.value === user.username) {
                   if(passWord.current.value === user.password) {
                     isUserValid = true;
@@ -42,7 +41,10 @@ export default function Home() {
         })
         .then(() => {
             if(isUserValid) {
-              router.push(`/users/${thisUser.id}`)
+              router.push(`/users/${thisUser.id}/mymeetups`)
+            }
+            else{
+              alert("Invalid username or password")
             }
         })
   }

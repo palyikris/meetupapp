@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "addnew.module.scss",
+        "../uniform.scss"
+    ],
+    "names": [],
+    "file": "addnew.module.css"
+}
