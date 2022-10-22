@@ -8,6 +8,7 @@ import { collection, addDoc, getDocs } from 'firebase/firestore';
 import {useRef, useState} from "react"
 import Link from "next/link"
 import { useRouter } from 'next/router'
+import LoaderScene from "./components/loader";
 
 
 
@@ -21,6 +22,7 @@ export default function Home() {
   let [usersArray, setUsersArray] = useState([])
   let isLoggedIn = false
   let areInputsFilled = true;
+  let [loadingScene, setLoadingScene] = useState(false);
 
 
 
@@ -40,12 +42,9 @@ export default function Home() {
         })
         .then(() => {
             usersArray.map((user) => {
-              console.log(user, user.username)
-              console.log(user.username === userName.current.value)
               if(user.username === userName.current.value){
                 isLoggedIn = true;
               }
-              console.log(isLoggedIn)
             })
         })
         .then(() => {
@@ -56,6 +55,7 @@ export default function Home() {
               alert('You are logged in already!')
             }
             else{
+              setLoadingScene(true)
               addDoc(
                 dbInstance,
                 {
@@ -77,6 +77,9 @@ export default function Home() {
     <>
       <UniHead title="Registrate" description="Get started with UrmeetUps" icon="../public/vercel.svg"></UniHead>
       <div className={styles.container}>
+        {loadingScene ? (
+          <LoaderScene></LoaderScene>
+        ) : (
         <div className={styles.form}>
           <div className={styles.data}>
             <label htmlFor="">Username</label>
@@ -96,6 +99,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        )}
       </div>
     </>
   )

@@ -13,7 +13,6 @@ export default function MeetupList(props){
                 return(
                     <div className={styles.listItem} key={item.id}>
                         <h1 className={styles.name}>{item.name}</h1>
-                        console.log(item.name)
                         <h4 className={styles.description}>{item.description}</h4>
                         <div>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">

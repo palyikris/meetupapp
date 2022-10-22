@@ -9,3 +9,55 @@ $highlighter: #000d16;
     flex-direction: $direction;
     width: 100%;
 }
+
+@mixin inputField {
+    @include centerDiv(row);
+    justify-content: space-evenly;
+    margin: 2vmin 0 2vmin 0;
+    label{
+        width: 20%;
+        color: $maincolor;
+        padding: 0 3vmin;
+    }
+    input{
+        width: 50%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $maincolor;
+        padding: 1vmin .5vmin;
+        outline: none;
+        color: $maincolor;
+    }
+}
+@mixin highlight {
+    border: 1.2px solid $maincolor;
+    padding: 10vmin 5vmin;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 1px rgba(198, 35, 104, 0.75);
+}
+@mixin loader {
+    .loader{
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+    }
+    .loader:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid $maincolor;
+        border-color: $maincolor transparent $maincolor transparent;
+        animation: loader 1.2s linear infinite;
+        }
+        @keyframes loader {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }    
+}

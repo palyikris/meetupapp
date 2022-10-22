@@ -1,1 +1,155 @@
-/* No CSS *//*# sourceMappingURL=addnew.module.css.map */
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin-top: 10vmin;
+  border: 1.2px solid #C62368;
+  padding: 10vmin 5vmin;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(198, 35, 104, 0.75);
+          box-shadow: 0px 0px 15px 1px rgba(198, 35, 104, 0.75);
+  width: 50%;
+  margin-bottom: 10vmin;
+  padding: 10vmin 3vmin 5vmin 3vmin;
+}
+
+.container .form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 2vmin 0 2vmin 0;
+}
+
+.container .form div label {
+  width: 20%;
+  color: #C62368;
+  padding: 0 3vmin;
+}
+
+.container .form div input {
+  width: 50%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #C62368;
+  padding: 1vmin .5vmin;
+  outline: none;
+  color: #C62368;
+}
+
+.container .form button {
+  margin-top: 3vmin;
+  background-color: transparent;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  width: auto;
+  outline: none;
+  border: none;
+}
+
+.container .form button:hover {
+  cursor: pointer;
+}
+
+.container .form button svg {
+  width: 55px;
+  color: #C62368;
+}
+
+.container .lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.container .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  -webkit-animation: lds-dual-ring 1.2s linear infinite;
+          animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@-webkit-keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=addnew.module.css.map */

@@ -1,0 +1,7 @@
+@import "../uniform";
+
+.container{
+    margin-top: 20vmin;
+    @include loader();
+    @include centerDiv(row);
+}
