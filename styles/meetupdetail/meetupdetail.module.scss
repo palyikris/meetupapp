@@ -1,0 +1,34 @@
+@import "../uniform";
+
+.container{
+    @include centerDiv(column);
+    .form{
+        @include centerDiv(column);
+        @include highlight();
+        margin: 10vmin 0;
+        width: 50%;
+        .data{
+            @include inputField();
+            @include centerDiv(row);
+        }
+        .button{
+            background-color: $maincolor;
+            border-radius: 10px;
+            @include centerDiv(row);
+            width: auto;
+            padding: 1vmin 10vmin;
+            margin-top: 10vmin;
+            border: 1px solid transparent;
+            transition: all 0.7s;
+            &:hover{
+                cursor: pointer;
+                border: 1px solid $maincolor;
+                background-color: $bgcolor;
+                color: $maincolor;
+            }
+            svg{
+                width: 25px;
+            }
+        }
+    }
+}

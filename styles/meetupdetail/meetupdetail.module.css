@@ -13,10 +13,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  width: auto;
 }
 
-.container .listItem {
+.container .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,19 +30,16 @@
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin: 10vmin;
-  border: 1px solid #C62368;
+  border: 1.2px solid #C62368;
+  padding: 10vmin 5vmin;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 15px 1px rgba(198, 35, 104, 0.75);
           box-shadow: 0px 0px 15px 1px rgba(198, 35, 104, 0.75);
-  padding: 8vmin 3vmin;
+  margin: 10vmin 0;
+  width: 50%;
 }
 
-.container .listItem div {
-  color: #C62368;
+.container .form .data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,31 +54,36 @@
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  margin: 1vmin 0;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 2vmin 0 2vmin 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
 }
 
-.container .listItem div p {
-  margin: 0;
+.container .form .data label {
+  width: 20%;
+  color: #C62368;
+  padding: 0 3vmin;
 }
 
-.container .listItem svg {
-  width: 25px;
-  margin-right: 2vmin;
-}
-
-.container .listItem h1 {
+.container .form .data input {
+  width: 50%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #C62368;
+  padding: 1vmin .5vmin;
+  outline: none;
   color: #C62368;
 }
 
-.container .listItem h4 {
-  font-style: italic;
-  color: #C62368;
-  margin-bottom: 8vmin;
-}
-
-.container .listItem button {
+.container .form .button {
   background-color: #C62368;
-  color: #00101c;
+  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,23 +99,21 @@
           flex-direction: row;
   width: 100%;
   width: auto;
-  padding: 1vmin 15vmin;
-  margin: 5vmin 2vmin 0 2vmin;
-  border-radius: 10px;
+  padding: 1vmin 10vmin;
+  margin-top: 10vmin;
   border: 1px solid transparent;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
-  outline: none;
 }
 
-.container .listItem button:hover {
-  color: #C62368;
-  background-color: #00101c;
-  border: 1px solid #C62368;
+.container .form .button:hover {
   cursor: pointer;
+  border: 1px solid #C62368;
+  background-color: #00101c;
+  color: #C62368;
 }
 
-.container .listItem button svg {
-  margin: 0;
+.container .form .button svg {
+  width: 25px;
 }
-/*# sourceMappingURL=meetuplist.module.css.map */
+/*# sourceMappingURL=meetupdetail.module.css.map */

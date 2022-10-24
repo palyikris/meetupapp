@@ -39,10 +39,11 @@
             @include centerDiv(row);
             width: auto;
             padding: 1vmin 15vmin;
-            margin-top: 5vmin;
+            margin: 5vmin 2vmin 0 2vmin; 
             border-radius: 10px;
             border: 1px solid transparent;
             transition: all 0.7s;
+            outline: none;
             &:hover{
                 color: $maincolor;
                 background-color: $bgcolor;

@@ -19,7 +19,8 @@ export default function UserPage(){
     let [loadingScene, setLoadingScene] = useState(false)
     const dbInstance = collection(db, `meetups/${userId}/userMeetups`);
 
-    getDocs(dbInstance)
+    const fetchData = () => {
+        getDocs(dbInstance)
         .then((data) => {
             setLoadingScene(true)
             setUserMeetUps(data.docs.map((item) =>{
@@ -29,8 +30,18 @@ export default function UserPage(){
         .then(() => {
             setLoadingScene(false)
         })
+    }
 
 
+    const loadMeetups = () => {
+        if(userMeetUps.length === 0){
+            fetchData()
+        }
+        else{
+        }
+    }
+
+    loadMeetups()
     
     return(
         <div className={styles.container}>
@@ -40,7 +51,7 @@ export default function UserPage(){
                 <div className={styles.container}>
                     <UniHead title="UrmeetUps My Meetups" description="User Page for UrmeetUps" icon="../../../public/favicon.ico"></UniHead>
                     <Topnav user={userId} />
-                    <MeetupList list={userMeetUps} className={styles.meetupList} />
+                    <MeetupList list={userMeetUps} userId={userId} className={styles.meetupList} />
                 </div>
             )}
         </div>

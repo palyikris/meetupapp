@@ -23,19 +23,27 @@ export default function Home() {
   const dbInstance = collection(db, 'users')
 
 
-  useEffect(() => {
-      getDocs(dbInstance)
-      .then(data => {
-          setLoadingScene(true);
-          setUsersArray(data.docs.map((doc) => {
-            return{...doc.data(), id: doc.id}
-          }))
-      })
-      .then(() => {
-          setLoadingScene(false)
-      })
-  }, [userName, passWord])
+  const fetchData = () => {
+    getDocs(dbInstance)
+    .then(data => {
+        setLoadingScene(true);
+        setUsersArray(data.docs.map((doc) => {
+          return{...doc.data(), id: doc.id}
+        }))
+    })
+    .then(() => {
+        setLoadingScene(false)
+    })
+  }
   
+  const loadData = () => {
+    if(usersArray.length === 0){
+      fetchData()
+    }
+    else{
+
+    }
+  }
 
 
   function login()  {
@@ -56,6 +64,7 @@ export default function Home() {
       })
   }
 
+  loadData()
 
   return (
 
