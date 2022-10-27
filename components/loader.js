@@ -1,4 +1,4 @@
-import styles from '../../styles/loader/loader.module.css'
+import styles from '../styles/loader/loader.module.css'
 
 
 

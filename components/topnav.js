@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from "../../styles/topnav/topnav.module.css"
+import styles from "../styles/topnav/topnav.module.css"
 
 export default function Topnav(props){
     return(

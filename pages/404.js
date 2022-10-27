@@ -1,4 +1,4 @@
-import UniHead from "./components/header"
+import UniHead from "../components/header"
 
 
 export default function errorPage(){
