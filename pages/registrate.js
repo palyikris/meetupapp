@@ -2,13 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/home/Home.module.css'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import UniHead from "./components/header"
+import UniHead from "../components/header"
 import {app, db}  from "../firebaseConfig"
 import { collection, addDoc, getDocs } from 'firebase/firestore';
 import {useRef, useState} from "react"
 import Link from "next/link"
 import { useRouter } from 'next/router'
-import LoaderScene from "./components/loader";
+import LoaderScene from "../components/loader";
 
 
 

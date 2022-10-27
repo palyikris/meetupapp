@@ -1,9 +1,9 @@
 import { useRouter } from "next/router"
-import Topnav from '../../components/topnav'
+import Topnav from '../../../components/topnav'
 import {app, db}  from "../../../firebaseConfig"
 import { collection, addDoc, getDocs, updateDoc, doc } from 'firebase/firestore';
-import UniHead from "../../components/header"
-import LoaderScene from "../../components/loader"
+import UniHead from "../../../components/header"
+import LoaderScene from "../../../components/loader"
 import {useState, useEffect, useRef} from "react"
 import styles from "../../../styles/meetupdetail/meetupdetail.module.css"
 

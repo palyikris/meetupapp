@@ -1,6 +1,6 @@
 import styles from "../../styles/meetuplist/meetuplist.module.css"
 import { useRouter } from "next/router"
-import {app, db}  from "../../firebaseConfig"
+import {app, db}  from "../firebaseConfig"
 import { doc, deleteDoc, updateDoc, getDoc, collection, getDocs } from 'firebase/firestore';
 
 

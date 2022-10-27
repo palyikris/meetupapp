@@ -1,12 +1,12 @@
 import {useRouter} from 'next/router'
-import Topnav from '../../components/topnav'
+import Topnav from '../../../components/topnav'
 import {app, db}  from "../../../firebaseConfig"
 import { collection, addDoc, getDocs, doc, deleteDoc } from 'firebase/firestore';
-import UniHead from "../../components/header"
-import MeetupList from "../../components/meetupList"
+import UniHead from "../../../components/header"
+import MeetupList from "../../../components/meetupList"
 import {useState} from "react"
 import styles from "../../../styles/mymeetups/mymeetups.module.css"
-import LoaderScene from "../../components/loader"
+import LoaderScene from "../../../components/loader"
 import Link from "next/link"
 
 

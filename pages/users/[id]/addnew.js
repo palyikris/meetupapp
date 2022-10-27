@@ -1,11 +1,11 @@
-import UniHead from "../../components/header"
-import Topnav from '../../components/topnav'
+import UniHead from "../../../components/header"
+import Topnav from '../../../components/topnav'
 import { useRouter } from "next/router"
 import styles from "../../../styles/addnew/addnew.module.css"
 import {useRef, useState} from "react"
 import {app, db}  from "../../../firebaseConfig"
 import { collection, addDoc, getDocs } from 'firebase/firestore';
-import LoaderScene from "../../components/loader"
+import LoaderScene from "../../../components/loader"
 
 
 

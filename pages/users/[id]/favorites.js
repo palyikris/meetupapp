@@ -1,10 +1,10 @@
-import UniHead from "../../components/header"
-import Topnav from '../../components/topnav'
+import UniHead from "../../../components/header"
+import Topnav from '../../../components/topnav'
 import { useRouter } from "next/router"
 import {app, db}  from "../../../firebaseConfig"
 import { collection, addDoc, getDocs, doc, deleteDoc } from "firebase/firestore"
 import {useState} from "react"
-import MeetupList from "../../components/meetupList"
+import MeetupList from "../../../components/meetupList"
 import styles from "../../../styles/favorite/favorite.module.css"
 
  
