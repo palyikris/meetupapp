@@ -2,9 +2,9 @@
     "version": 3,
     "mappings": "AAGA,AAAA,UAAU,CAAA;ECEN,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,cAAc,EDJK,MAAM;ECKzB,KAAK,EAAE,IAAI;CDKd;;AAXD,AAEI,UAFM,CAEN,EAAE,CAAA;EACE,KAAK,ECNA,OAAO;EDOZ,UAAU,EAAE,MAAM;CACrB;;AALL,AAMI,UANM,CAMN,WAAW,CAAA;EACP,KAAK,ECVA,OAAO;EDWZ,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,MAAM;CACrB",
     "sources": [
-        "mymeetups.module.scss",
+        "favorite.module.scss",
         "../uniform.scss"
     ],
     "names": [],
-    "file": "mymeetups.module.css"
+    "file": "favorite.module.css"
 }

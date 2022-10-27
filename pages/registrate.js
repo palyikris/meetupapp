@@ -12,7 +12,7 @@ import LoaderScene from "./components/loader";
 
 
 
-export default function Home() {
+export default function RegistryPage() {
 
 
    
@@ -104,3 +104,5 @@ export default function Home() {
     </>
   )
 }
+
+RegistryPage.displayName = "My Meetups Page"

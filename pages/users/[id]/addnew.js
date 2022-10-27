@@ -9,7 +9,7 @@ import LoaderScene from "../../components/loader"
 
 
 
-export default function(){
+export default function AddNewPage(){
     
     const router = useRouter()
     const userId = router.query.id
@@ -46,6 +46,7 @@ export default function(){
                     place: place.current.value,
                     date: date.current.value,
                     time: time.current.value,
+                    isFavorite: false
                 }
             )
             .then(() => {
@@ -96,3 +97,5 @@ export default function(){
     )
 
 }
+
+AddNewPage.displayName = "My New Meetups Page"

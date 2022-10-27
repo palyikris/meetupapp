@@ -99,3 +99,5 @@ export default function Home() {
     </>
   )
 }
+
+Home.displayName = "My Meetups Page"

@@ -64,7 +64,7 @@ export default function MeetupDetailPage(){
                 console.error(err)
             }
             else{
-                console.log("Success")
+                router.push(`/users/${userId}/mymeetups`)
             }
         })
     }
@@ -110,3 +110,5 @@ export default function MeetupDetailPage(){
     )
 
 }
+
+MeetupDetailPage.displayName = "My Meetups Detail Page"
